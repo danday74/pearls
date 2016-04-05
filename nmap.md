@@ -5,9 +5,9 @@ This linux command outputs SSL cipher strengths and warnings when executed again
 
 Install nmap from https://nmap.org/download.html
 
-(1) wget the tar ( ATOW wget https://nmap.org/dist/nmap-7.12.tar.bz2 )
+1. wget the tar ( ATOW wget https://nmap.org/dist/nmap-7.12.tar.bz2 )
 
-(2) Follow the compile-it-yourself instructions.
+2. Follow the compile-it-yourself instructions.
 
 ## Execute
 
