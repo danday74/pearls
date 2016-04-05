@@ -1,4 +1,5 @@
 # nmap
+
 This linux command outputs SSL cipher strengths and warnings when executed against a running web server.
 
 ## Installation
@@ -19,7 +20,7 @@ Do not use SSLv3, TLSv1.1 & 1.2 should be available.
 
 Cipher suites should not be weak (Grade B and C).
 
-Tweak webserver config to correct these.
+Tweak webserver config to correct these then restart server and run nmap again.
 
 Example Apache config.
 
