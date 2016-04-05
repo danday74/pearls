@@ -1,14 +1,26 @@
 # nmap
+This linux command outputs SSL cipher strengths and warnings when executed against a running web server.
 
-install nmap from https://nmap.org/download.html with ...
+## Installation
 
-1 - wget the tar ( ATOW wget https://nmap.org/dist/nmap-7.12.tar.bz2 )
+Install nmap from https://nmap.org/download.html
 
-2 - Follow the compile-it-yourself instructions
+(1) wget the tar ( ATOW wget https://nmap.org/dist/nmap-7.12.tar.bz2 )
 
-3 - nmap --script ssl-enum-ciphers -p 443 localhost
+(2) Follow the compile-it-yourself instructions.
 
-This outputs cipher strengths and warnings. Tweak webserver config to correct these.
+## Execute
+
+nmap --script ssl-enum-ciphers -p 443 localhost
+
+## Notes
+
+Do not use SSLv3, TLSv1.1 & 1.2 should be available.
+
+Cipher suites should not be weak (Grade B and C).
+
+Tweak webserver config to correct these.
+
 Example Apache config.
 
 ```
@@ -20,10 +32,8 @@ SSLHonorCipherOrder On
 SSLCipherSuite ECDHE-RSA-AES256-SHA384:AES256-SHA256:RC4:HIGH:!MD5:!aNULL:!EDH:!AESGCM
 ```
 
-Do not use SSLv3, TLSv1.1 & 1.2 should be available.
+## Related articles
 
-Cipher suites shouldn't be weak (Grade B and C).
-
-https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers/
+https://hynek.me/articles/hardening-your-web-servers-ssl-ciphers
 
 https://raymii.org/s/tutorials/Strong_SSL_Security_On_Apache2.html
