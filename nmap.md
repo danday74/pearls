@@ -22,7 +22,7 @@ Cipher suites should not be weak (Grade B and C).
 
 Tweak webserver config to correct these then restart server and run nmap again.
 
-Example Apache config.
+Example Apache config before fix.
 
 ```
 # SSL Engine Switch:
