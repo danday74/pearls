@@ -12,3 +12,7 @@ Multiple ssh keys on one client.
 # [Fiddler AutoResponder](fiddler.md)
 
 Intercept and mock requests.
+
+# netcat
+
+Learn this when time permits.
